@@ -1,0 +1,27 @@
+{
+  "name": "chat-bot",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon -r dotenv/config --experimental-json-modules server.js"
+  },
+  "keywords": [
+    "javascript",
+    "backend"
+  ],
+  "author": "Bismoy Das",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.4",
+    "prettier": "^3.3.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "openai": "^4.72.0"
+  }
+}
