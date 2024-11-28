@@ -9,7 +9,6 @@ const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY,
 });
 
-// Common anime-related keywords and character names
 const animeKeywords = [
     'anime', 'manga', 'otaku', 'japanese animation', 'light novel',
     'shounen', 'shoujo', 'seinen', 'josei', 'cosplay', 'naruto', 'luffy', 'goku', 'eren',
@@ -38,12 +37,10 @@ const containsAnimeKeywords = (message) => {
 };
 
 const isAnimeRelated = async (message) => {
-    // Always allow greetings
     if (isGreeting(message)) {
         return true;
     }
 
-    // Quick check for common anime keywords
     if (containsAnimeKeywords(message)) {
         return true;
     }
@@ -85,7 +82,6 @@ const isAnimeRelated = async (message) => {
 
 const generateResponse = async (message) => {
     try {
-        // Handle greetings specially
         if (isGreeting(message)) {
             return {
                 response: "Konnichiwa! ✨ I'm your anime companion! Let's talk about your favorite anime, manga, and everything in between!",
